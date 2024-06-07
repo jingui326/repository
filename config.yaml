@@ -1,0 +1,219 @@
+aws-s3:
+  bucket: xxxxx-10005608
+  region: ap-shanghai
+  endpoint: ""
+  s3-force-path-style: false
+  disable-ssl: false
+  secret-id: your-secret-id
+  secret-key: your-secret-key
+  base-url: https://gin.vue.admin
+  path-prefix: lottery-opencode
+captcha:
+  key-long: 6
+  img-width: 240
+  img-height: 80
+  open-captcha: 0
+  open-captcha-timeout: 3600
+cors:
+  mode: strict-whitelist
+  whitelist:
+    - allow-origin: example1.com
+      allow-methods: POST, GET
+      allow-headers: Content-Type,AccessToken,X-CSRF-Token, Authorization, Token,X-Token,X-User-Id
+      expose-headers: Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers,
+        Content-Type
+      allow-credentials: true
+    - allow-origin: example2.com
+      allow-methods: GET, POST
+      allow-headers: content-type
+      expose-headers: Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers,
+        Content-Type
+      allow-credentials: true
+db-list:
+  - disable: true
+    type: ""
+    alias-name: ""
+    path: ""
+    port: ""
+    config: ""
+    db-name: ""
+    username: ""
+    password: ""
+    prefix: ""
+    singular: false
+    engine: ""
+    max-idle-conns: 10
+    max-open-conns: 100
+    log-mode: ""
+    log-zap: false
+email:
+  to: xxx@qq.com
+  port: 465
+  from: xxx@163.com
+  host: smtp.163.com
+  is-ssl: true
+  secret: xxx
+  nickname: test
+excel:
+  dir: ./resource/excel/
+hua-wei-obs:
+  path: you-path
+  bucket: you-bucket
+  endpoint: you-endpoint
+  access-key: you-access-key
+  secret-key: you-secret-key
+jwt:
+  signing-key: 827e111a-629f-41e9-a4c1-ce8878c930ba
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: cgaming
+local:
+  path: uploads/file
+  store-path: uploads/file
+mssql:
+  path: ""
+  port: ""
+  config: ""
+  db-name: ""
+  username: ""
+  password: ""
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+mysql:
+  path: 192.168.184.129
+  port: "3306"
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name: dd28
+  username: root
+  password: "rS/004gkbM/urrbdRjaQ7Q=="
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 10
+  log-mode: error
+  log-zap: false
+mysql-order:
+  path:
+  port: ""
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name:
+  username:
+  password: ""
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 10
+  log-mode: error
+  log-zap: false
+oracle:
+  path: ""
+  port: ""
+  config: ""
+  db-name: ""
+  username: ""
+  password: ""
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+pgsql:
+  path: ""
+  port: ""
+  config: ""
+  db-name: ""
+  username: ""
+  password: ""
+  prefix: ""
+  singular: false
+  engine: ""
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+qiniu:
+  zone: ZoneHuaDong
+  bucket: ""
+  img-path: ""
+  use-https: false
+  access-key: ""
+  secret-key: ""
+  use-cdn-domains: false
+redis:
+  db: 0
+  addr:
+  password: ""
+system:
+  env: develop
+  addr: 8871
+  db-type: mysql
+  oss-type: local
+  use-multipoint: true   #开启单点登录,不允许多点登录
+  use-redis: true
+  iplimit-count: 15000
+  iplimit-time: 3600
+  router-prefix: "admin"
+  site: "egame10000"
+  platform: "egame"
+tencent-cos:
+  bucket: xxxxx-10005608
+  region: ap-shanghai
+  secret-id: your-secret-id
+  secret-key: your-secret-key
+  base-url: https://gin.vue.admin
+  path-prefix: lottery-opencode
+timer:
+  start: false
+  spec: '@daily'
+  with_seconds: false
+  detail:
+    - tableName: sys_operation_records
+      compareField: created_at
+      interval: 2160h
+    - tableName: jwt_blacklists
+      compareField: created_at
+      interval: 168h
+zap:
+  level: info
+  prefix: '[cg-pay-admin]'
+  format: console
+  director: log
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  max-age: 0
+  show-line: true
+  log-in-console: true
+#云信配置
+netease:
+  key: '57feaa48112bc0e975fe5c15a5cb7bd7'
+  secret: '3140af210cd6'
+els:
+  addr: 'http://192.168.128.253:9200'
+  #  addr: 'http://35.220.193.82:9200'
+  #  addr: 'http://159.138.135.98:9200'
+  maxidleconns: 20
+grpc:
+  addr: 0.0.0.0:8818
+#rabbit
+rabbit:
+  addr: 'amqp://admin:admin@192.168.128.240:5672/'
+seaweedfs:
+  addr: 'https://weedfs.3333d.vip/'
+  iptodomain:
+    - ip: '154.23.176.7:8081'
+      domain: 'https://volume1.3333d.vip'
+    - ip: '154.23.176.7:8082'
+      domain: 'https://volume2.3333d.vip'
+    - ip: '154.23.176.7:8083'
+      domain: 'https://volume3.3333d.vip'
+    - ip: '154.23.176.7:8084'
+      domain: 'https://volume4.3333d.vip'
